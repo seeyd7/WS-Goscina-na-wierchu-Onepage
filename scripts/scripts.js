@@ -41,14 +41,18 @@ menuToggler.addEventListener("click", () => {
 
 
 const slider = document.querySelector(".slider");
-const article = document.querySelector(".article-main p");
+const article = document.querySelector(".dzifka");
+const article2 = document.querySelector(".dzifka2");
  
 slider.addEventListener("mouseenter", () => {
   article.style.opacity = 1;
   article.style.transition = "2s";
+  article.style.transitionDelay = "0.2s";
 });
 slider.addEventListener("mouseleave", () => {
   article.style.opacity = 0;
   article.style.transition = "0.2s";
+  article.style.transitionDelay = "0s";
 });  
+
 
