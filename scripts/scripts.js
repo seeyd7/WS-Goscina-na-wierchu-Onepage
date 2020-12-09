@@ -47,8 +47,8 @@ sliders.forEach((slider, index) => {
 	slider.addEventListener("mouseenter", () => {
 	articles[index].style.zIndex = "1";
     articles[index].style.opacity = 1;
-    articles[index].style.transition = "2s";
-	articles[index].style.transitionDelay = "0.1s";
+    articles[index].style.transition = "1.5s";
+	articles[index].style.transitionDelay = "0.05s";
   });
 
   slider.addEventListener("mouseleave", () => {
