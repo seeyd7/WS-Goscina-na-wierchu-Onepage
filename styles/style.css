@@ -126,10 +126,10 @@ nav{
   .navbar-menu{
     position: fixed;
     height: 100vh;
-    width: 100%;
+    width: 85%;
     background: #2d3436;
-    top: -100%;
-    right: 0;
+    right: -100%;
+    top: 0;
     max-width: 400px;
     padding: 80px 50px;
     transition: .3s ease-out;
@@ -145,7 +145,7 @@ nav{
     right: 5%;
   }
   .navbar-menu.active{
-    top: 0;
+    right: 0;
   }
   .menu-toggler.active span:nth-child(1){
     transform: rotate(-45deg);
@@ -316,6 +316,11 @@ main {
 @media screen and (max-width: 470px) {
   .slider p {
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .slider p {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 405px) {
