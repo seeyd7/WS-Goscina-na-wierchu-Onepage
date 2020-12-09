@@ -45,15 +45,17 @@ const articles = document.querySelectorAll(".article-main p");
  
 sliders.forEach((slider, index) => {
 	slider.addEventListener("mouseenter", () => {
+	articles[index].style.zIndex = "1";
     articles[index].style.opacity = 1;
     articles[index].style.transition = "2s";
-    articles[index].style.transitionDelay = "0.2s";
+	articles[index].style.transitionDelay = "0.1s";
   });
 
   slider.addEventListener("mouseleave", () => {
+	articles[index].style.zIndex = "-1";
     articles[index].style.opacity = 0;
     articles[index].style.transition = "0.2s";
-    articles[index].style.transitionDelay = "0s";
+	articles[index].style.transitionDelay = "0s";
   }); 
 });
 
