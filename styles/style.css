@@ -414,6 +414,7 @@ aside {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 92%;
 }
 .contact-form input, .contact-form textarea{
   width: 100%;
