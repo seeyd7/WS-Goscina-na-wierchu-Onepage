@@ -1,0 +1,347 @@
+/* 
+Theme Name: BasicMood
+Author: Szymon Gutt - IT CROWD
+Description: Funkcjonalny i responsywny szablon CMS
+Version: 1.0
+*/
+*{
+    margin: 0; 
+    padding: 0;
+    text-decoration: none;
+    font-family: "Roboto Slab", "sans-serif";
+    box-sizing: border-box;
+    outline: 0 !important;
+    text-decoration: none !important;
+}
+html{
+  scroll-behavior: smooth;
+  font-family: "Roboto Slab", "sans-serif";
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+#go2Top {
+    position: fixed;
+    z-index: 999;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #9b59b6;
+    border: none;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    line-height: 40px;
+    transition-duration: 0.6s;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+#go2Top:hover {
+    line-height: 20px;
+}
+/* Scrollbar */
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #353b48;
+}
+/* Scrollbar */
+.dark{
+  background-color: #222f3e;
+}
+.dark .section-title{
+  color: #f1f1f1;
+}
+.dark .section-title::before{
+  background-color: #f1f1f1;
+}
+.dark .section-title::after{
+  border: 4px solid #222f3e;
+}
+/* Menu */
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 2%;
+  z-index: 9999;
+  transition: .3s linear;
+  height: 10vh;
+}
+.menu-toggler{
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 1000;
+  display: none;
+}
+.menu-toggler span{
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: relative;
+  transition: .3s linear;
+}
+.navbar-menu a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: .2s linear;
+}
+.navbar-menu a:hover{
+  color: #9b59b6;
+}
+@media screen and (max-width: 980px){
+  .home h1 {
+    font-size: 50px;
+  }
+  .menu-toggler{
+    display: block;
+  }
+  nav {
+    position: fixed;
+  }
+  .navbar-menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #2d3436;
+    top: -100%;
+    right: 0;
+    max-width: 400px;
+    padding: 80px 50px;
+    transition: .3s ease-out;
+    z-index: 999;
+  }
+  .navbar-menu a{
+    display: block;
+    font-size: 30px;
+    margin: 30px 0;
+  }
+  .menu-toggler {
+    position: fixed;
+    right: 5%;
+  }
+  .navbar-menu.active{
+    top: 0;
+  }
+  .menu-toggler.active span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 4px;
+  }
+  .menu-toggler.active span:nth-child(2){
+    opacity: 0;
+  }
+  .menu-toggler.active span:nth-child(3){
+    transform: rotate(45deg);
+    bottom: 14px;
+  }
+}
+/* Menu */
+/* Header */
+header {
+  height: 100vh;
+  background: url(../img/bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+header h1, h2, h3 {
+  color: white;
+}
+header h1 {
+  font-size: 45px;
+}
+header h2 {
+  font-size: 25px;
+}
+header a {
+  height: 60px;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  transition: .3s;
+}
+header a:hover {
+  color: white;
+}
+header a i{
+  animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to { 
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -15px, 0);
+      }
+
+  70% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+      transform: translate3d(0, -4px, 0);
+  }
+}
+/* Header */
+/* Main */
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.articles {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 6%;
+}
+.section-title{
+  color: black;
+  text-align: center;
+  margin-bottom: 4%;
+  margin-top: 4%;
+  position: relative;
+  font-size: 26px;
+  padding-bottom: 20px;
+}
+.section-title::before{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: #111;
+  bottom: 0;
+  left: calc(50% - 40px);
+}
+.section-title::after{
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  background-color: #9b59b6;
+  border: 4px solid #f1f1f1;
+  left: calc(50% - 12px);
+  bottom: -8px;
+}
+.article-holder {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.article-main {
+  height: 40vh;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+.article-main p {
+  width: 70%;
+  position: absolute;
+  transition: 0.2s;
+  transition-delay: 0.3s;
+  margin-top: 100px;
+  opacity: 0;
+  color: white;
+}
+.slider {
+  width: 100%;
+  height: 100px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  border-top: solid 2px white;
+  display: flex;
+  justify-content: center;
+  transition: 0.6s;
+  text-align: center;
+}
+.slider h2 {
+  line-height: 120px;
+}
+.slider:hover {
+  height: 100%;
+}
+.square {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: black;
+  color: white;
+  border: solid 2px white;
+  margin-top: -26px;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square i {
+  transform: rotate(-45deg);
+}
+@media screen and (min-width: 1400px) {
+  .articles {
+    flex-direction: row;
+  }
+  .article-main {
+    width: 80%;
+  }
+  .article-main p {
+    width: 35%;
+  }
+}
+/* Main */
+/* Aside */
+aside {
+  height: 100%;
+}
+/* Aside */
