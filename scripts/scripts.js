@@ -41,8 +41,7 @@ menuToggler.addEventListener("click", () => {
 
 
 const slider = document.querySelector(".slider");
-const article = document.querySelector(".dzifka");
-const article2 = document.querySelector(".dzifka2");
+const article = document.querySelector(".article-main p");
  
 slider.addEventListener("mouseenter", () => {
   article.style.opacity = 1;
