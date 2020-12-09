@@ -284,6 +284,7 @@ main {
   justify-content: center;
   align-items: flex-end;
   text-align: center;
+  background-size: cover !important;
 }
 .article-main p {
   width: 70%;
