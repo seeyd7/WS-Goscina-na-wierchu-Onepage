@@ -414,6 +414,9 @@ main {
   .info-inside {
     width: 40%;
   }
+  .black_square h2 {
+    font-size: 26px !important;
+  }
 }
 /* Slogan */
 /* Gallery */
@@ -524,6 +527,9 @@ aside {
     max-width: 300px;
     margin: 10px 0;
   }
+  .black_square iframe {
+    width: 85%;
+  }
 }
 .contact-form{
   display: flex;
@@ -570,7 +576,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
+  height: 85vh;
   background-color: #222f3e;
 }
 .top-footer {
@@ -587,6 +593,7 @@ footer {
 .black_square {
   font-family: 'Roboto', sans-serif;
   display: flex;
+  text-align: center;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
@@ -597,8 +604,13 @@ footer {
 .black_square h2 {
   font-size: 50px;
 }
+.cursive_greatvibes {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+}
 .bottom-footer {
-  height: 30vh;
+  padding: 2%;
+  height: 35vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -606,6 +618,8 @@ footer {
   flex-direction: column;
   color:white;
   background-color: #222f3e;
+  text-align: center;
+  font-size: 15px;
 }
 .bottom-footer i {
   color: white;
@@ -622,5 +636,15 @@ hr {
 @media screen and (max-width: 500px) {
   .contact-form .btn {
     width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .black_square h2 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .black_square h2 {
+    font-size: 28px;
   }
 }
