@@ -490,6 +490,7 @@ aside {
   align-items: center;
   color: #fff;
   cursor: pointer;
+  text-align: center;
 }
 .card-icon{
   font-size: 28px;
