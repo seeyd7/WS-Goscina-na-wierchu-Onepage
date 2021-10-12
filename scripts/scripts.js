@@ -59,4 +59,3 @@ sliders.forEach((slider, index) => {
   }); 
 });
 
-

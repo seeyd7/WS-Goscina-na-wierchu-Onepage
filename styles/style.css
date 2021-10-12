@@ -1,17 +1,17 @@
 /* 
 Theme Name: BasicMood
-Author: Szymon Gutt - IT CROWD
+Author: Szymon Gutt
 Description: Funkcjonalny i responsywny szablon CMS
 Version: 1.0
 */
 *{
-    margin: 0; 
-    padding: 0;
-    text-decoration: none;
-    font-family: "Roboto Slab", "sans-serif";
-    box-sizing: border-box;
-    outline: 0 !important;
-    text-decoration: none !important;
+  margin: 0; 
+  padding: 0;
+  text-decoration: none;
+  font-family: "Roboto Slab", "sans-serif";
+  box-sizing: border-box;
+  outline: 0 !important;
+  text-decoration: none !important;
 }
 html{
   scroll-behavior: smooth;
@@ -32,7 +32,7 @@ input[type=number] {
     right: 40px;
     width: 40px;
     height: 40px;
-    background-color: #9b59b6;
+    background-color: rgb(166, 29, 33);
     border: none;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
@@ -104,14 +104,15 @@ nav{
   transition: .3s linear;
 }
 .navbar-menu a{
+  font-family: 'Raleway', sans-serif;
   color: #fff;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
   margin-left: 30px;
   transition: .2s linear;
 }
 .navbar-menu a:hover{
-  color: #9b59b6;
+  color: rgb(166, 29, 33); 
 }
 @media screen and (max-width: 980px){
   .home h1 {
@@ -164,6 +165,7 @@ nav{
 header {
   height: 100vh;
   background: url(../img/bg.jpg) no-repeat center;
+  filter: grayscale(15%);
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -176,10 +178,15 @@ header h1, h2, h3 {
   color: white;
 }
 header h1 {
-  font-size: 45px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 90px;
+  font-weight: bold;
+  text-shadow: 5px 5px #000000;
 }
 header h2 {
+  text-shadow: 2px 2px #000000;
   font-size: 25px;
+  font-family: 'Raleway', sans-serif;
 }
 header a {
   height: 60px;
@@ -237,10 +244,33 @@ main {
 .articles {
   height: 100%;
   width: 100%;
+  padding: 2% 15% 2% 15%;
   display: flex;
-  align-items: center;
   flex-direction: column;
   margin-bottom: 6%;
+  align-items: center;
+  text-align: center;
+}
+.article-holder {
+  margin: 2% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article-holder img {
+  padding: 0.5%;
+  border: solid 1px white;
+}
+.article-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  width: 100%;
+  height: auto;
+}
+.article-info p {
+  color: white;
 }
 .section-title{
   color: black;
@@ -265,102 +295,61 @@ main {
   position: absolute;
   width: 25px;
   height: 20px;
-  background-color: #9b59b6;
+  background-color: rgb(166, 29, 33);
   border: 4px solid #f1f1f1;
   left: calc(50% - 12px);
   bottom: -8px;
 }
-.article-holder {
-  width: 100%;
-  height: 45vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.article-main {
-  height: 40vh;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  text-align: center;
-  background-size: cover !important;
-}
-.article-main p {
-  width: 70%;
-  position: absolute;
-  transition: 0.2s;
-  transition-delay: 0.3s;
-  margin-top: 100px;
-  opacity: 0;
-  color: white;
-}
-.slider {
-  width: 100%;
-  height: 100px;
-  background: black;
-  display: flex;
-  justify-content: center;
-  border-top: solid 2px white;
-  display: flex;
-  justify-content: center;
-  transition: 0.6s;
-  text-align: center;
-}
-.slider h2 {
-  line-height: 120px;
-}
-.slider:hover {
-  height: 100%;
-}
-@media screen and (max-width: 470px) {
-  .slider p {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 370px) {
-  .slider p {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 405px) {
-  .slider p {
-    font-size: 13px;
-  }
-}
-@media screen and (max-width: 320px) {
-  .slider p {
-    font-size: 12px;
-  }
-}
-.square {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  background: black;
-  color: white;
-  border: solid 2px white;
-  margin-top: -26px;
-  transform: rotate(45deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.square i {
-  transform: rotate(-45deg);
-}
-@media screen and (min-width: 1400px) {
-  .articles {
-    flex-direction: row;
-  }
-  .article-main {
-    width: 80%;
-  }
-  .article-main p {
-    width: 35%;
-  }
-}
 /* Main */
+/* Slogan  */
+#portfolio-info {
+  height: 30vh;
+  background-color: rgb(166, 29, 33);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.info-box {
+  color: white;
+  width: 25%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-box p {
+  font-size: 20px;
+  margin-top: 3.5%;
+  color: white;
+  line-height: 7px;
+}
+.info-inside {
+  margin-left: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.info-inside p {
+  text-transform: uppercase;
+}
+.info-inside-info {
+  line-height: 15px !important;
+}
+@media screen and (max-width: 1040px) {
+  #portfolio-info {
+    flex-direction: column;
+    height: 50vh;
+  }
+  .info-box {
+    width: 100%;
+  }
+  .info-inside {
+    width: 20%;
+  }
+} 
+/* Slogan */
 /* Aside */
 aside {
   height: 100%;
@@ -395,7 +384,7 @@ aside {
 }
 .card-icon{
   font-size: 28px;
-  background: #9b59b6;
+  background: rgb(166, 29, 33);
   width: 60px;
   height: 60px;
   text-align: center;
@@ -405,7 +394,7 @@ aside {
 }
 .card:hover .card-icon{
   background: none;
-  color: #9b59b6;
+  color: rgb(166, 29, 33);
   transform: scale(1.6);
 }
 .card p{
@@ -451,16 +440,16 @@ aside {
 .contact-form .btn{
   width: 180px;
   background-color: transparent;
-  color: #9b59b6;
+  color: rgb(166, 29, 33);
   font-size: 16px;
-  border: 2px solid #9b59b6;
+  border: 2px solid rgb(166, 29, 33);
   padding: 0;
   margin-right: auto;
   cursor: pointer;
   transition: .3s linear;
 }
 .contact-form .btn:hover{
-  background-color:#9b59b6;
+  background-color:rgb(166, 29, 33);
   color: #fff;
 }
 .nameZone, .emailZone{
@@ -504,12 +493,6 @@ hr {
 }
 i {
   color: white;
-  transition: 0.3s linear;
-  cursor: pointer;
-}
-i:hover {
-  color: #9b59b6;
-  transform: scale(1.1);
 }
 @media screen and (max-width: 500px) {
   .contact-form .btn {
