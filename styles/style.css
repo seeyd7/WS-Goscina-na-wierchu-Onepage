@@ -85,6 +85,10 @@ nav{
   transition: .3s linear;
   height: 10vh;
 }
+.logo img {
+  height: 8vh;
+  width: auto;
+}
 .menu-toggler{
   background: none;
   width: 30px;
