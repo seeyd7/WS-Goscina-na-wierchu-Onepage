@@ -390,7 +390,7 @@ main {
 @media screen and (max-width: 1060px) {
   #portfolio-info {
     flex-direction: column;
-    height: 50vh;
+    height: auto;
   }
   .info-box {
     width: 100%;
@@ -410,9 +410,6 @@ main {
   }
 }
 @media screen and (max-width: 300px) {
-  #portfolio-info {
-    height: 65vh;
-  }
   .info-inside {
     width: 40%;
   }
