@@ -258,6 +258,12 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+}
+.main_pharagraph {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
 }
 .articles {
   height: 100%;
