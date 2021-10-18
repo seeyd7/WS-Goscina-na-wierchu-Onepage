@@ -61,7 +61,7 @@ input[type=number] {
 }
 /* Scrollbar */
 .dark{
-  background-color: #222f3e;
+  background-color: #2d3436;
 }
 .dark .section-title{
   color: #f1f1f1;
@@ -70,7 +70,7 @@ input[type=number] {
   background-color: #ffffff;
 }
 .dark .section-title::after{
-  border: 4px solid #222f3e;
+  border: 4px solid #2d3436;
 }
 /* Menu */
 nav{
@@ -120,7 +120,7 @@ nav{
 }
 @media screen and (max-width: 980px){
   .home h1 {
-    font-size: 50px;
+    font-size: 35px;
   }
   .menu-toggler{
     display: block;
@@ -196,10 +196,10 @@ header h1, h2, h3 {
   color: white;
 }
 header h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 90px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
   font-weight: bold;
-  text-shadow: 5px 5px #000000;
+  text-shadow: 2px 2px #000000;
 }
 header h2 {
   text-shadow: 2px 2px #000000;
@@ -458,6 +458,19 @@ main {
   filter: grayscale(0%);
 }
 /* Gallery */
+/* Spacer */
+#virtual-walk {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4%;
+}
+#virtual-walk iframe {
+  width: 1200px;
+  height: 60vh;
+}
+/* Spacer */
 /* Reviews */
 #reviews {
   height: 100%;
@@ -489,7 +502,7 @@ aside {
   padding: 0 20px;
 }
 .card{
-  background-color: #222f3e;
+  background-color: #2d3436;
   padding: 0 20px;
   margin: 0 10px;
   width: calc(33% - 20px);
@@ -552,7 +565,7 @@ aside {
   width: 100%;
   height: 50px;
   margin: 10px 0;
-  background-color: #222f3e;
+  background-color: #2d3436;
   border: none;
   outline: none;
   padding: 20px;
@@ -588,7 +601,7 @@ footer {
   flex-direction: column;
   align-items: center;
   height: 85vh;
-  background-color: #222f3e;
+  background-color: #2d3436;
 }
 .top-footer {
   display: flex;
@@ -628,7 +641,7 @@ footer {
   align-items: center;
   flex-direction: column;
   color:white;
-  background-color: #222f3e;
+  background-color: #2d3436;
   text-align: center;
   font-size: 15px;
 }
@@ -657,5 +670,10 @@ hr {
 @media screen and (max-width: 370px) {
   .black_square h2 {
     font-size: 28px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .headerlogo {
+    width: 75%;
   }
 }
