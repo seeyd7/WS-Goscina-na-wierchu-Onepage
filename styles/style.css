@@ -251,9 +251,20 @@ header a i{
       transform: translate3d(0, -4px, 0);
   }
 }
+.photo1, .photo3, .article-info2{
+  position: relative;
+  right: 80%;
+  transition: ease-in 1.5s;
+}
+.photo2, .article-info1, .article-info3{
+  position: relative;
+  left: 80%;
+  transition: ease-in 1.5s;
+}
 /* Header */
 /* Main */
 main {
+  overflow-x: hidden;
   height: 100%;
   display: flex;
   align-items: center;
@@ -282,6 +293,7 @@ main {
   align-items: center;
 }
 .article-holder img {
+  transition: ease-in 1.5s;
   height: auto;
   width: calc(50px + 40vw);
   flex-direction: row;
