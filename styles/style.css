@@ -118,7 +118,7 @@ nav{
 .navbar-menu a:hover{
   color: rgb(166, 29, 33); 
 }
-@media screen and (max-width: 980px){
+@media screen and (max-width: 1110px){
   .home h1 {
     font-size: 35px;
   }
@@ -273,8 +273,8 @@ main {
 }
 .main_pharagraph {
   color: white;
-  font-size: 23px;
-  font-weight: bold;
+  font-size: 21px;
+  font-weight: 500;
 }
 .articles {
   height: 100%;
@@ -409,6 +409,58 @@ main {
 .info-inside-info {
   line-height: 15px !important;
 }
+/* Dostępnych pokoi */
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+.rooms-avaible {
+  animation: counter2 1.5s infinite alternate ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  counter-reset: num var(--num);
+  font-weight: bold;
+}
+.rooms-avaible::after {
+  content: counter(num);
+  animation-fill-mode: forwards;
+}
+@keyframes counter2 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 8;
+  }
+}
+/* Dostępnych pokoi */
+/* Opinie */
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+.good-reviews {
+  animation: counter3 3.5s infinite alternate ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  counter-reset: num var(--num);
+  font-weight: bold;
+}
+.good-reviews::after {
+  content: counter(num) "%";
+  animation-fill-mode: forwards;
+}
+@keyframes counter3 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 90;
+  }
+}
+/* Opinie */
 @media screen and (max-width: 1060px) {
   #portfolio-info {
     flex-direction: column;
@@ -481,6 +533,47 @@ main {
 #virtual-walk iframe {
   width: 1200px;
   height: 60vh;
+}
+@media screen and (max-width: 1400px) {
+  #virtual-walk iframe {
+    width: 1000px;
+    height: 55vh;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #virtual-walk iframe {
+    width: 800px;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #virtual-walk iframe {
+    width: 600px;
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 700px) {
+  #virtual-walk iframe {
+    width: 550px;
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 625px) {
+  #virtual-walk iframe {
+    width: 470px;
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 530px) {
+  #virtual-walk iframe {
+    width: 400px;
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 460px) {
+  #virtual-walk {
+    display: none;
+  }
 }
 /* Spacer */
 /* Reviews */
