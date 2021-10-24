@@ -6,7 +6,6 @@ const menuToggler = document.querySelector(".menu-toggler");
 
 const navbar = document.querySelector("nav");
 
-const point = document.querySelector(".row_reverse")
 
 const photo1 = document.querySelector(".photo1");
 const photo2 = document.querySelector(".photo2");
@@ -15,6 +14,8 @@ const photo3 = document.querySelector(".photo3");
 const article1 = document.querySelector(".article-info1");
 const article2 = document.querySelector(".article-info2");
 const article3 = document.querySelector(".article-info3");
+
+const row_reverse = document.querySelector("#portfolio-info");
 
 
 addEventListener("scroll", () => {
@@ -33,27 +34,56 @@ addEventListener("scroll", () => {
 		navbar.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
 		console.log(go2Top.style.cursor);
 	}
-})
-
-addEventListener("scroll", () => {
-	let scroll = this.scrollY;
 	if(scroll > photo1.clientHeight) {
     photo1.style.right= "0"
     article1.style.left= "0"
 	} else {
 		console.log("ready");
 	}
-})
-
-addEventListener("scroll", () => {
-	let scroll = this.scrollY;
-	if(scroll > point.clientHeight) {
+	if(scroll > photo2.clientHeight) {
     photo2.style.left= "0"
     article2.style.right= "0"
 	} else {
 		console.log("ready");
 	}
+	if(scroll > photo3.clientHeight) {
+    photo3.style.right= "0"
+    article3.style.left= "0"
+	} else {
+		console.log("ready");
+	}
 })
+
+// addEventListener("scroll", () => {
+// 	let scroll = this.scrollY;
+// 	if(scroll > photo1.clientHeight) {
+//     photo1.style.right= "0"
+//     article1.style.left= "0"
+// 	} else {
+// 		console.log("ready");
+// 	}
+// })
+
+// addEventListener("scroll", () => {
+// 	let scroll = this.scrollY;
+// 	if(scroll > article2.clientHeight) {
+//     photo2.style.left= "0"
+//     article2.style.right= "0"
+// 	} else {
+// 		console.log("ready");
+// 	}
+// })
+
+// addEventListener("scroll", () => {
+// 	let scroll = this.scrollY;
+// 	if(scroll > photo3.clientHeight) {
+//     photo3.style.right= "0"
+//     article3.style.left= "0"
+// 	} else {
+// 		console.log("ready");
+// 	}
+// })
+
 
 go2Top.addEventListener("click", () => {
 	if(go2Top.style.opacity != 0) window.scrollTo(0, 0);
