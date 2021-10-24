@@ -6,6 +6,16 @@ const menuToggler = document.querySelector(".menu-toggler");
 
 const navbar = document.querySelector("nav");
 
+const point = document.querySelector(".row_reverse")
+
+const photo1 = document.querySelector(".photo1");
+const photo2 = document.querySelector(".photo2");
+const photo3 = document.querySelector(".photo3");
+
+const article1 = document.querySelector(".article-info1");
+const article2 = document.querySelector(".article-info2");
+const article3 = document.querySelector(".article-info3");
+
 
 addEventListener("scroll", () => {
 	let scroll = this.scrollY;
@@ -25,6 +35,26 @@ addEventListener("scroll", () => {
 	}
 })
 
+addEventListener("scroll", () => {
+	let scroll = this.scrollY;
+	if(scroll > photo1.clientHeight) {
+    photo1.style.right= "0"
+    article1.style.left= "0"
+	} else {
+		console.log("ready");
+	}
+})
+
+addEventListener("scroll", () => {
+	let scroll = this.scrollY;
+	if(scroll > point.clientHeight) {
+    photo2.style.left= "0"
+    article2.style.right= "0"
+	} else {
+		console.log("ready");
+	}
+})
+
 go2Top.addEventListener("click", () => {
 	if(go2Top.style.opacity != 0) window.scrollTo(0, 0);
 })
@@ -40,22 +70,22 @@ menuToggler.addEventListener("click", () => {
 });
 
 
-const sliders = document.querySelectorAll(".slider");
-const articles = document.querySelectorAll(".article-main p");
+// const sliders = document.querySelectorAll(".slider");
+// const articles = document.querySelectorAll(".article-main p");
  
-sliders.forEach((slider, index) => {
-	slider.addEventListener("mouseenter", () => {
-	articles[index].style.zIndex = "1";
-    articles[index].style.opacity = 1;
-    articles[index].style.transition = "1.5s";
-	articles[index].style.transitionDelay = "0.05s";
-  });
+// sliders.forEach((slider, index) => {
+// 	slider.addEventListener("mouseenter", () => {
+// 	articles[index].style.zIndex = "1";
+//     articles[index].style.opacity = 1;
+//     articles[index].style.transition = "1.5s";
+// 	articles[index].style.transitionDelay = "0.05s";
+//   });
 
-  slider.addEventListener("mouseleave", () => {
-	articles[index].style.zIndex = "-1";
-    articles[index].style.opacity = 0;
-    articles[index].style.transition = "0.2s";
-	articles[index].style.transitionDelay = "0s";
-  }); 
-});
+//   slider.addEventListener("mouseleave", () => {
+// 	articles[index].style.zIndex = "-1";
+//     articles[index].style.opacity = 0;
+//     articles[index].style.transition = "0.2s";
+// 	articles[index].style.transitionDelay = "0s";
+//   }); 
+// });
 
